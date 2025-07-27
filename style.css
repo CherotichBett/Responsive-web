@@ -1,0 +1,268 @@
+/*goolge Fonts*/
+@import url(https://fonts.googleapis.com/css2);
+
+/*==== Global====*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+     font-family: poppins, sans-serif;                         
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  
+    background-size: cover;
+    background-position: center;background-image: url(fish.jpg);
+
+
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: top;
+    z-index: 99;
+    color: white;
+    background-position: bottom;
+    background-size: cover;
+    
+
+}
+
+
+h2 {
+font-size: 2em;
+color: bisque;
+user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.navigation a::after {
+content: '';
+position: absolute;
+left: 0;
+bottom:-6px ;
+width: 100%;
+height: 3px;
+background: white;
+border-radius: 5px;
+transform-origin: right;
+transform: scaleX(0);
+transition: transform (10s);
+}
+
+.navigation a:hover:after {
+ transform: scaleX(1);  
+  transform-origin: left;
+}
+
+.navigation .btnlogin-popup {
+width: 100px;
+height: 50px;
+background: transparent;
+border: 2px solid #fff;
+outline: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1.1em;
+color: white;
+font-weight: 500;
+margin-left: 40px;
+transition: 5s;
+}
+
+.navigation .btnlogin-popup:hover {
+background: white;
+color: aqua;
+}
+
+.wrapper {
+    position: relative;
+    width: 500px;
+    height: 500px;     
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px; 
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);  
+    display: flex;
+    justify-content: flex-start;
+    align-items: right;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+
+}
+
+.wrapper.active-popup{
+    transform: scale(1);
+}
+.wrapper.active{
+    height:120px;
+}
+
+.wrapper .form-box {
+         width:100px;
+         padding:40px;
+
+ }
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+  /*display: none;*/
+}
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px)
+}
+
+.wrapper .form-box.Register{
+    position: absolute;
+    transform: none;
+    transform: translateX(400px);
+
+}
+
+.wrapper.active .form-box.register{
+    transition: none;
+    transform: translateX(-400px)
+}
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: white;
+    color: black;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+    
+}
+
+.form-box h2 {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+
+}
+
+.input-box {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border-bottom: 2px solid white;
+    margin: 25px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    pointer-events: none;
+    transition: transform (5s);
+
+}
+.input-box input:focus~label,
+.input-box input:valid~label {    
+    top: -5px;    
+}
+
+.input-box input {
+    width: 300%;
+    height: 50%;
+    background: transparent;
+    border: none;
+    outline:none;
+    font: size 0.5em;
+    color: darkgreen;
+    font-weight: 300;
+    padding: o 35px, 0 5px;
+    transform: scaleX(0);
+    transition: transform (10s);
+}
+
+
+.input-box .icon {
+    position: absolute;
+    right:10px;
+    font-size: 1.2em;
+    color: whitesmoke;
+    line-height: 57px;
+}
+
+
+.remember-forget {
+    font-weight: .8em;
+    color: darkgoldenrod;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: left;
+}
+.remember-forget label input {
+    accent-color: green;
+    margin-right: 3px;
+}
+
+.remember-forget a {
+    color: darkgoldenrod;
+    text-decoration: underline;
+    justify-content: left;
+}
+
+.btn {
+    width: 320px;
+    height: 20px;
+    background: whitesmoke;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    color-scheme: green;
+    font-weight: 500;                    
+}
+
+
+.login-register {
+    font-size: .8em;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-register p a {
+    color: blue;
+    text-decoration: none;
+    font-weight: 600;
+
+} .login-register p a:hover {
+   text-decoration: #fff;
+}
+
+
